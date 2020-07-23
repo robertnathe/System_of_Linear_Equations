@@ -1,2 +1,2 @@
-# hello
+# hello.exe
 Hello World!
