@@ -1,2 +1,1 @@
-# hello.exe
-Hello World!
+# hello.cpp
