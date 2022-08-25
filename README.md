@@ -1,1 +1,1 @@
-The LU decomposition method is used to solve AX = B with and without pivoting.
+The LU decomposition method is used to solve AX = B with and without pivoting. The Jacobi iterative method is used to solve AX = B using the matrix market format for input and output of data. The input data is in the files A.dat and B.dat; the output files are in C.dat .
