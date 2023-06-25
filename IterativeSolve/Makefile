@@ -1,8 +1,8 @@
-output: main.o
-	g++ main.o -o output
+output: IterativeSolve.o
+	g++ IterativeSolve.o -o IterativeSolve
     
-main.o: main.cpp
-	g++ -std=c++20 -ggdb -fopenmp -pedantic -c -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion main.cpp
+IterativeSolve.o: IterativeSolve.cpp
+	g++ -std=c++20 -ggdb -fopenmp -pedantic -c -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion IterativeSolve.cpp
     
 clean:
 	rm *.o
