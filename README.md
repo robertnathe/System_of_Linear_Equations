@@ -2,4 +2,4 @@ The Jacobi, Gauss-Seidel, SOR (Successive Overrelaxation) iteration methods, and
 
 Compile the TridiagonalSolve file using g++ -std=c++20 main.cpp, and compile the IterationSolve file using g++ -std=c++20 IterationSolve.cpp .
 
-Testing_Function implements a small matrix library with the STL vector class using a makefile.
+Testing_Function implements a small matrix library based upon the STL vector class using a makefile.
