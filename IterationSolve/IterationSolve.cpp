@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <cmath>
 using namespace std; 
+
 #define a(i,j) a[(i)*nrows+(j)]
 int SOR(vector<double> A[], double B[], double X[], unsigned int nrows, unsigned int ncols, double tolerance, unsigned int Max_Iter, bool convergence_check);
 int Gauss_Seidel(vector<double> A[], double B[], double X[], unsigned int nrows, unsigned int ncols, double tolerance, unsigned int Max_Iter, bool convergence_check);
