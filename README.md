@@ -1,5 +1,3 @@
-The Jacobi, Gauss-Seidel, SOR (Successive Overrelaxation) iteration methods, and a direct method for tridiagonal matrices, the Thomas algorithm, solve AX = B. The input data  files are A.dat and B.dat; the output data is in the file X.dat . The output file for the Thomas algorithm is C.dat .
-
-Compile the TridiagonalSolve file using g++ -std=c++20 main.cpp, and compile the IterationSolve file using g++ -std=c++20 IterationSolve.cpp .
+The Jacobi, Gauss-Seidel, SOR (Successive Overrelaxation) iteration methods, and a direct method for tridiagonal matrices, the Thomas algorithm, solve AX = B. The input data  files are A.dat and B.dat; the output data is in the file X.dat .
 
 Testing_Function implements a small matrix library based upon the STL vector class using a makefile.
