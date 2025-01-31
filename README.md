@@ -2,7 +2,7 @@ Matrix Solvers and Neural Network Utilities
 
 Overview
 
-This repository contains implementations of several numerical methods and utilities for matrix operations and neural network training. It includes:
+Several numerical methods and utilities are implemented for matrix operations and neural network training.
 
 Direct Solvers:
 
