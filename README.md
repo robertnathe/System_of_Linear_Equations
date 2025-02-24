@@ -1,8 +1,8 @@
-Matrix Solvers and Neural Network Utilities
+Matrix Solvers
 
 Overview
 
-Several numerical methods and utilities are implemented for matrix operations and neural network training.
+Several numerical methods and utilities are implemented for matrix operations.
 
 Direct Solvers:
 
@@ -23,8 +23,6 @@ Input/Output Formats: Supports the Matrix Market file format for reading and wri
 Performance Measurement: Includes timing utilities to measure the execution time of each algorithm.
 
 Flexibility: Allows for easy modification and extension of algorithms.
-
-Neural Network Utilities: Includes basic functions for neural network training, including stochastic gradient descent and forward propagation.
 
 Files
 
