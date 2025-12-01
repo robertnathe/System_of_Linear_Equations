@@ -30,7 +30,6 @@ main.cpp: Contains the main function demonstrating the usage of all implemented 
 
 Matrix_Operations_Library: A collection of utility functions for matrix and vector operations.
 
-A.mtx and B.mtx: Input files containing the coefficient matrix and the right-hand side vector, respectively.
+Input files containing the coefficient matrix and the right-hand side vector, respectively.
 
-X_out.dat: Output file containing the computed solution vector.
-
+Output file containing the computed solution vector.
