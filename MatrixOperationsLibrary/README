@@ -6,9 +6,9 @@ and Matrix Market (MM) file I/O for interoperability with scientific datasets.
 
 Overview
 
-Sparse matrices often appear in scientific computing, graph analysis, and machine learning. Representing them efficiently 
-can save large amounts of memory and computation time. This program uses the CSR (Compressed Sparse Row) storage format 
-to efficiently handle sparse matrix operations.
+Sparse matrices often appear in scientific computing, graph analysis, and machine learning. Representing 
+them efficiently can save large amounts of memory and computation time. This program uses the CSR 
+(Compressed Sparse Row) storage format to efficiently handle sparse matrix operations.
 
 The program:
 Reads a sparse matrix (`A.mtx`) and a vector (`B.mtx`) in Matrix Market format.  
@@ -120,4 +120,3 @@ Preconditioner testing
 Scientific simulation prototypes
 High-performance computing teaching materials
 
-Would you like me to include sample benchmark results or performance notes (e.g., speed comparison against dense multiplication)?
