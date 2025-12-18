@@ -1,14 +1,14 @@
 CSR Optimized Sparse Matrix Operations
 
 This project provides a C++ implementation of high-performance sparse matrix operations using the 
-Compressed Sparse Row (CSR) format. It supports matrix scaling, matrix-vector multiplication (SpMV), 
-and Matrix Market (MM) file I/O for interoperability with scientific datasets.
+Compressed Sparse Row (CSR) format. It supports matrix scaling, matrix-vector multiplication 
+(SpMV), and Matrix Market (MM) file I/O for interoperability with scientific datasets.
 
 Overview
 
-Sparse matrices often appear in scientific computing, graph analysis, and machine learning. Representing 
-them efficiently can save large amounts of memory and computation time. This program uses the CSR 
-(Compressed Sparse Row) storage format to efficiently handle sparse matrix operations.
+Sparse matrices often appear in scientific computing, graph analysis, and machine learning. 
+Representing them efficiently can save large amounts of memory and computation time. This program 
+uses the CSR (Compressed Sparse Row) storage format to efficiently handle sparse matrix operations.
 
 The program:
 Reads a sparse matrix (`A.mtx`) and a vector (`B.mtx`) in Matrix Market format.  
