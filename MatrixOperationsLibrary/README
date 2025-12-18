@@ -1,0 +1,123 @@
+CSR Optimized Sparse Matrix Operations
+
+This project provides a C++ implementation of high-performance sparse matrix operations using the 
+Compressed Sparse Row (CSR) format. It supports matrix scaling, matrix-vector multiplication (SpMV), 
+and Matrix Market (MM) file I/O for interoperability with scientific datasets.
+
+Overview
+
+Sparse matrices often appear in scientific computing, graph analysis, and machine learning. Representing them efficiently 
+can save large amounts of memory and computation time. This program uses the CSR (Compressed Sparse Row) storage format 
+to efficiently handle sparse matrix operations.
+
+The program:
+Reads a sparse matrix (`A.mtx`) and a vector (`B.mtx`) in Matrix Market format.  
+Scales all non-zero entries of the matrix by a factor (default: 2.0).  
+Computes the matrix-vector product \( X = A \times B \).  
+Writes the resulting matrix and vector to disk in MM format (`output.mtx`, `X.mtx`).
+
+Files and Structure
+
+| File | Description |
+|------|--------------|
+| `main.cpp` | Main source code implementing CSR matrix operations and I/O. |
+| `A.mtx` | Example Matrix Market input matrix (user-provided). |
+| `B.mtx` | Example Matrix Market input vector (user-provided). |
+| `output.mtx` | Output matrix (after scaling). |
+| `X.mtx` | Output vector (result of matrix-vector multiplication). |
+
+Key Components
+
+1. Vector Class
+A lightweight wrapper over `std::vector<T>` providing:
+Resizing and indexing operations.
+Stream output for quick display.
+Used for storing both dense and result vectors.
+
+2. Matrix Class (CSR Implementation)
+Efficient sparse matrix representation using:
+`values`: Non-zero matrix entries.
+`col_indices`: Column indices of non-zero values.
+`row_ptr`: Offsets indicating the start of each row in the compressed arrays.
+
+Supported operations:
+`buildFromTriplets(...)`: Constructs CSR format from coordinate form.
+`scale(factor)`: Scales all non-zero elements.
+`multiply(Vector<T>&)`: Performs sparse matrix-vector multiplication.
+
+3. MatrixMarket Utility Class
+Handles reading/writing matrices and vectors in Matrix Market (.mtx) format:
+`readMatrix(filename)`: Reads sparse matrix.
+`writeMatrix(filename, Matrix)`: Saves sparse matrix.
+`readVector(filename)`: Reads vector.
+`writeVector(filename, Vector)`: Saves vector.
+
+Building and Running
+
+Requirements
+C++17 or newer
+g++ or clang++ compiler
+
+Compilation
+```bash
+g++ -std=c++17 -O2 -o csr_ops main.cpp
+```
+
+Execution
+Ensure you have valid `A.mtx` and `B.mtx` files in Matrix Market format.
+
+```bash
+./csr_ops
+```
+
+The program will:
+1. Read `A.mtx` (sparse matrix) and `B.mtx` (vector).  
+2. Scale `A` by 2.  
+3. Compute \( X = A \times B \).  
+4. Write `output.mtx` (scaled matrix) and `X.mtx` (result vector).  
+5. Print `X` to the console.
+
+Example Matrix Market Inputs
+
+Example `A.mtx`:
+```
+%%MatrixMarket matrix coordinate real general
+3 3 4
+1 1 10
+1 3 20
+2 2 30
+3 1 40
+```
+
+Example `B.mtx`:
+```
+%%MatrixMarket matrix coordinate real general
+3 1 3
+1 1 1.0
+2 1 2.0
+3 1 3.0
+```
+
+Sample Output
+
+Console:
+```
+Successfully processed CSR Matrix. Result Vector X:
+70
+60
+80
+```
+
+Generated Files:
+`output.mtx` — Scaled matrix (values × 2)
+`X.mtx` — Computed result vector in Matrix Market format
+
+Applications
+
+This CSR implementation can serve as a base for:
+Sparse linear algebra solvers
+Preconditioner testing
+Scientific simulation prototypes
+High-performance computing teaching materials
+
+Would you like me to include sample benchmark results or performance notes (e.g., speed comparison against dense multiplication)?
